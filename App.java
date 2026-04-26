@@ -1,3 +1,22 @@
+/*
+como eu já criei o receberDano() eu não precisaria usar o setVida() nos métodos de ataque...
+
+correção para a sessão de CRIATURA VENCEDORA:
+int posicaoVencedor = 0;
+
+for (int i = 1; i < criaturas.length; i++) {
+    if (criaturas[i].getVida() > criaturas[posicaoVencedor].getVida()) {
+        posicaoVencedor = i;
+    }
+}
+
+Correção no método estaViva() (beeeemm mais simples):
+public boolean estaViva() {
+    return this.vida > 0;
+}
+
+*/
+
 public class App {
     public static void main(String[] args) {
         Dragao drako = new Dragao("Drako", 100, 50, 50, 35);
@@ -39,7 +58,7 @@ public class App {
         int posicaoVencedor = 0;
         for (int i = 0; i < criaturas.length; i++) {
             for (int x = 1; x < criaturas.length; x++) {
-                if (criaturas[i].getVida() > criaturas[j].getVida()) {
+                if (criaturas[i].getVida() > criaturas[x].getVida()) {
                     posicaoVencedor = i;
                 }
             }

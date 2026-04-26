@@ -68,6 +68,6 @@ public class Criatura {
         if (dano < 1) {
             dano = 1;
         }
-        alvo.setVida(vida - dano);
+        alvo.setVida(alvo.getVida() - dano);
     }
 }
