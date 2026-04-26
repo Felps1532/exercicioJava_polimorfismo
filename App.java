@@ -8,8 +8,7 @@ public class App {
 
         criaturas[0] = drako; // drako ataca lobinho
         criaturas[1] = lobinho; // lobinho ataca golem
-        criaturas[2] = golem;
-        ; // golem ataca drako
+        criaturas[2] = golem; // golem ataca drako
 
         System.out.println("--------- STATUS INICIAL ---------");
         for (int i = 0; i < criaturas.length; i++) {
