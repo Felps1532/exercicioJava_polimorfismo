@@ -6,9 +6,10 @@ public class App {
 
         Criatura criaturas[] = new Criatura[3];
 
-        criaturas[0] = drako;
-        criaturas[1] = lobinho;
+        criaturas[0] = drako; // drako ataca lobinho
+        criaturas[1] = lobinho; // lobinho ataca golem
         criaturas[2] = golem;
+        ; // golem ataca drako
 
         System.out.println("--------- STATUS INICIAL ---------");
         for (int i = 0; i < criaturas.length; i++) {
@@ -17,13 +18,14 @@ public class App {
         System.out.println("--------- FIM STATUS ---------");
 
         System.out.println("--------- BATALHA ---------");
+        int j = 1;
         for (int i = 0; i < criaturas.length; i++) {
-            for (int j = 1; j < criaturas.length; j++) {
-                criaturas[i].atacarCriatura(criaturas[j]);
+            criaturas[i].atacarCriatura(criaturas[j]);
 
-                if (j == criaturas.length - 1) {
-                    j = 0;
-                }
+            j++;
+
+            if (j == criaturas.length) {
+                j = 0;
             }
         }
         System.out.println("--------- FIM BATALHA ---------");
