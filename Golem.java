@@ -23,7 +23,7 @@ public class Golem extends Criatura {
         if (dano <= 0) {
             dano = 1;
         }
-        alvo.setVida(getVida() - dano);
+        alvo.setVida(alvo.getVida() - dano);
 
         System.out.println(getNome() + " atacou " + alvo.getNome() + " e causou " + dano + " de dano.");
     }

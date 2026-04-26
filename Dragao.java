@@ -31,7 +31,7 @@ public class Dragao extends Criatura {
             dano = 1;
         }
 
-        alvo.setVida(getVida() - dano);
+        alvo.setVida(alvo.getVida() - dano);
 
         System.out.println(getNome() + " atacou " + alvo.getNome() + " e causou " + dano + " de dano.");
     }

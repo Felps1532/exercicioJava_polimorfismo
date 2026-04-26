@@ -21,16 +21,16 @@ public class Lobo extends Criatura {
     public void atacarCriatura(Criatura alvo) {
         int dano;
         if (this.velocidade >= 8) {
-            dano = (getAtaque() + 3) + alvo.getDefesa();
+            dano = (getAtaque() + 3) - alvo.getDefesa();
         } else {
             dano = getAtaque() - alvo.getDefesa();
         }
 
-        if (dano <= 1) {
+        if (dano <= 0) {
             dano = 1;
         }
 
-        alvo.setVida(getVida() - dano);
+        alvo.setVida(alvo.getVida() - dano);
 
         System.out.println(getNome() + " atacou " + alvo.getNome() + " e causou " + dano + " de dano.");
     }

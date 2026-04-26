@@ -14,7 +14,7 @@ public class App {
         for (int i = 0; i < criaturas.length; i++) {
             criaturas[i].mostrarStatus();
         }
-        System.out.println("--------- FIM STATUS ---------");
+        System.out.println("--------- FIM STATUS ---------\n");
 
         System.out.println("--------- BATALHA ---------");
         int j = 1;
@@ -27,6 +27,12 @@ public class App {
                 j = 0;
             }
         }
-        System.out.println("--------- FIM BATALHA ---------");
+        System.out.println("--------- FIM BATALHA ---------\n");
+
+        System.out.println("--------- STATUS FINAL ---------");
+        for (int i = 0; i < criaturas.length; i++) {
+            criaturas[i].mostrarStatus();
+        }
+        System.out.println("--------- FIM STATUS FINAL ---------\n");
     }
 }

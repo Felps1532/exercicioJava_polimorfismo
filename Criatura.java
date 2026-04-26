@@ -12,19 +12,19 @@ public class Criatura {
     }
 
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public int getVida() {
-        return vida;
+        return this.vida;
     }
 
     public int getAtaque() {
-        return ataque;
+        return this.ataque;
     }
 
     public int getDefesa() {
-        return defesa;
+        return this.defesa;
     }
 
     public void setNome(String nome) {
